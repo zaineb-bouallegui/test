@@ -11,9 +11,8 @@ import { EtudiantComponent } from './etudiant/etudiant.component';
 import { CreateEtudiantComponent } from './create-etudiant/create-etudiant.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { UpdateEtudiantComponent } from './update-etudiant/update-etudiant.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatTableModule } from '@angular/material/table';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -24,8 +23,8 @@ import { MatTableModule } from '@angular/material/table';
     RouterModule,
     AppRoutingModule,
     BrowserModule,
-    MatPaginatorModule,
-    MatTableModule,
+    NgxPaginationModule,
+    
     
    
   ],

@@ -45,8 +45,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let etudiant of etudiants">
+                                    <tr *ngFor="let etudiant of etudiants | paginate: { itemsPerPage: 5, currentPage: page, totalItems: totalLength }">
                                         <div *ngIf="errorMessage">
+                                            
+
   <p>{{ errorMessage }}</p>
 </div>
                                         <td>{{etudiant.idEtudiant}}</td>
@@ -73,7 +75,9 @@
                                 </tbody>
                             </table>
                            
-                             
+                             <div class="pagination">
+                                <pagination-controls (pageChange)="page=$event"></pagination-controls>
+                             </div>
                         </div>
                     </div>
                 </div>

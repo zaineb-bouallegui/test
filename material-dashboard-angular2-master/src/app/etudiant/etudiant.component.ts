@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./etudiant.component.scss']
 })
 export class EtudiantComponent implements OnInit {
+  totalLength:any;
+  page:number=1
   etudiants: Etudiant[];
   errorMessage: string = '';
   recherche: string = '';
