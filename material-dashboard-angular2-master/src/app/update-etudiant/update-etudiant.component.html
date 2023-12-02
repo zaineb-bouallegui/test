@@ -1,0 +1,56 @@
+<!-- Stylesheet Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- Scripts Bootstrap JS (jQuery doit être inclus avant Bootstrap JS) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <button (click)=" goToEtudiantList()" class="btn btn-link nav-link">Etudiant List</button>
+    </li>
+    
+    <li class="nav-item">
+            <a routerLink="/create-etudiant" routerLinkActive="active" class="nav-link">Add Etudiant</a>
+        </li> 
+  </ul>
+</nav>
+
+
+<div class="col-md-6 offset-md-3">
+    <h3> Update Etudiant </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> First Name</label>
+            <input type="text" class ="form-control" id = "nomEt"
+                [(ngModel)] = "etudiant.nomEt" name = "nomEt">
+        </div>
+    
+        <div class="form-group">
+            <label> Last Name</label>
+            <input type="text" class ="form-control" id = "prenomEt"
+                [(ngModel)] = "etudiant.prenomEt" name = "prenomEt">
+        </div>
+    
+        <div class="form-group">
+            <label> Cin</label>
+            <input type="text" class ="form-control" id = "cin"
+                [(ngModel)] = "etudiant.cin" name = "cin">
+        </div>
+        <div class="form-group">
+            <label>Ecole</label>
+            <input type="text" class="form-control" id = " ecole"
+            [(ngModel)] = "etudiant.ecole" name="ecole">
+            </div>
+            <div class="form-group">
+                <label>Date De Naissance</label>
+                <input type="text" class="form-control" id = " dateNaissance"
+                [(ngModel)] = "etudiant.dateNaissance" name="dateNaissance">
+                </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
